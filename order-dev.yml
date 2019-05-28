@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://172.16.254.239:3306/zhtc?useUnicode=true&characterEncoding=utf8&useSSL=false
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} #防止eureka注册服务时使用主机名，使用IP
+#    hostname: order
+server:
+  port: 8087
+#ribbon负载均衡机制
+#PRODUCT:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+env:
+  dev1
+girl:
+  name: he
+  age: 21
